@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consulta JSON</title>
+</head>
+<body>
+    <div id="trama">
+        CONTENIDO INICIAL.
+    </div>
+    <div id="personajes">
+        <h2>Personajes:</h2>
+        <ul id="lista-personajes"></ul>
+    </div>
+
+    <script>
+        let jsonData; 
+
+        fetch('pruebas.json')
+        .then(response => response.json())
+        .then(data => {
+            console.log(data);
+            console.log(data.temporadas[0].capitulos[0].trama);
+            jsonData = data; 
+            mostrarTrama(); 
+            mostrarLista();
+        })
+
+        function mostrarTrama(){
+            if (jsonData) {
+                document.getElementById("trama").appendChild(document.createTextNode(jsonData.temporadas[0].capitulos[0].trama));
+            }
+        }
+
+        function mostrarLista(){
+            if (jsonData && jsonData.personajes) {
+                const lista = document.getElementById("lista-personajes");
+                lista.innerHTML = ""; // Limpiar la lista antes de agregar elementos
+                
+                jsonData.personajes.forEach(personaje => {
+                    const listItem = document.createElement("li");
+                    listItem.textContent = personaje;
+                    lista.appendChild(listItem);
+                });
+            }
+        }
+
+        
+    </script>
+</body>
+</html>

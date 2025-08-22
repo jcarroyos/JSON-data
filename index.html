@@ -60,7 +60,17 @@
                 <div id="jsonResult" class="json-display">
                     <p>Los resultados de la API aparecerán aquí...</p>
                 </div>
-                
+                        <p id="primerProducto"></p>
+                        <p id="primerProductoPrecio"></p>
+        <script>
+            document.getElementById('loadProducts').addEventListener('click', function() {
+                // Directamente mostramos el primer producto
+                setTimeout(function() {
+                    document.getElementById('primerProducto').innerHTML = currentData.products[0].title;
+                    document.getElementById('primerProductoPrecio').innerHTML = "$" + currentData.products[0].price;
+                }, 100);
+            });
+        </script>
                 <div class="access-example">
                     <h3>Acceso con notación de punto:</h3>
                     <div class="dot-notation-controls">
@@ -88,6 +98,60 @@
             </ul>
         </section>
     </div>
+
+    <div class="caja-morral">
+        <div id="miMorral">
+            Mi Morral
+        </div>
+        <div id="contenidoMorral">
+            _____________
+        </div>
+
+        <div id="colorMorral">
+
+        </div>
+
+    </div>
+
+    <script>
+        let morral = {
+            "color": "green",
+            "tamano": "grande",
+            "contenido": [
+                {
+                    "tipo": "libro",
+                    "titulo": "Aprendiendo JavaScript",
+                    "autor": "Juan Pérez"
+                },
+                {
+                    "tipo": "cuaderno",
+                    "titulo": "Notas de clase",
+                    "autor": "María López"
+                },
+                {
+                    "tipo": "libro",
+                    "titulo": "Dune",
+                    "autor": "Frank Herbert"
+                }
+            ]
+        }
+        console.log(morral);
+        document.getElementById("miMorral").style.color = morral.color;
+        if (morral.tamano === "pequeño") {
+            document.getElementById("miMorral").style.fontSize = "0.5rem";
+        } else if (morral.tamano === "mediano") {
+            document.getElementById("miMorral").style.fontSize = "1rem";
+        } else if (morral.tamano === "grande") {
+            document.getElementById("miMorral").style.fontSize = "2rem";
+        }
+        document.getElementById("colorMorral").innerHTML = `Color del morral: ${morral.color}`;
+
+        document.getElementById("contenidoMorral").innerHTML = morral.contenido.map(item => {
+            return `<p>${item.tipo}: ${item.titulo} por ${item.autor}</p>`;
+        }).join('');
+
+    </script>
+
 
     <script src="script.js"></script>
 </body>

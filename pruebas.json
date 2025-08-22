@@ -1,0 +1,81 @@
+{
+  "titulo": "Mirada Oscura",
+  "personajes": [
+    "Maria",
+    "Lyra",
+    "David",
+    "Jax",
+    "Robert"
+  ],
+  "sinopsis": "Karen, una chica que lidia con un acoso constante debido a su hermosa apariencia, pero ¿Que es real y que no acerca de su vida?",
+  "temporadas": [
+    {
+      "id": "t1",
+      "numero": 1,
+      "trama": "Kael, a former memory detective, is pulled back into the underworld when his own traumatic memory is stolen. He partners with Lyra, a data thief, to navigate the neon-drenched streets of Aethelburg and uncover the truth.",
+      "personajes": [
+        "Kael",
+        "Lyra",
+        "The Curator"
+      ],
+      "capitulos": [
+        {
+          "id": "t1c1",
+          "titulo": "Un pozo sin fondo",
+          "duracion": "3 mins",
+          "trama": "Lidiando con el acoso constante, Karen va huye de sus acosadores hasta una parada de bus, en donde descubrirá una verdad que alterará su realidad",
+          "escenas": [
+            {
+              "id": "t1c1s1",
+              "nombre": "Huyendo del restaurante",
+              "duracion": "1 mins",
+              "personajes": [
+                "Karen",
+                "Robert"
+              ],
+              "contexto": "Karen se encuentra en un restaurante, en el que, por las miradas de una viejo, esta decide ir al baño. para luego salir del restaurante con las palmas sudando, y sus ojos vigilando a todos",
+              "lugar": "restaurante, baño",
+              "resumen": ""
+            },
+            {
+              "id": "t1c1s2",
+              "nombre": "Huyendo del restaurante",
+              "duracion": "1 mins",
+              "personajes": [
+                "Karen"
+              ],
+              "contexto": "Karen al salir del restaurante, se siente perseguida por alguien, por lo que decide acelerar el paso y dirigirse a la parada de bus.",
+              "lugar": "Calle de la parada de bus",
+              "resumen": ""
+            },
+            {
+              "id": "bc84b96c-e8e7-4908-82d7-3f5c6938eb1e",
+              "nombre": "Huyendo de sus perseguidores",
+              "duracion": "1 min",
+              "personajes": [
+                "Karen",
+                "Lyra",
+                "David",
+                "Jax",
+                "Robert"
+              ],
+              "contexto": "Después de llegar a la parada, Karen es acosada nuevamente por varias personas, un chico que le chifla, una chica que la mira con odio, otro chico que la mira de manera lasciva y un viejo que se sienta a su lado y se acerca cada vez más, todo esto para luego terminar en ella arrodilladla llorando, y todos a su alrededor desapareciendo convertidos en meras sombras.",
+              "lugar": "Parada de bus",
+              "resumen": ""
+            }
+          ],
+          "personajes": [
+            "Lyra",
+            "David",
+            "Jax",
+            "Robert"
+          ],
+          "locaciones": [
+            "Restaurante",
+            "parada de bus"
+          ]
+        }
+      ]
+    }
+  ]
+}

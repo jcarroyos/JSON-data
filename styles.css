@@ -1,3 +1,27 @@
+.caja-morral{
+    background-color: #e0f7fa;
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 20px;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+}
+
+p#primerProducto {
+    font-size: xxx-large;
+}
+
+p#primerProductoPrecio {
+    background: yellow;
+    font-size: xx-large;
+    padding: 38px;
+    border-radius: 51px;
+    display: inline-block;
+}
+
+
 /* Estilos generales */
 * {
     box-sizing: border-box;
